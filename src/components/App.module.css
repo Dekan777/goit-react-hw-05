@@ -1,5 +1,3 @@
-.btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container {
+  padding-left: 15px;
 }

@@ -1,0 +1,25 @@
+.movieListItem {
+  list-style: none;
+  margin-bottom: 20px;
+  width: 600px;
+}
+
+.movieConteiner {
+  display: flex;
+}
+
+.movieListLink {
+  text-decoration: none;
+}
+
+.movieListImg {
+  margin-right: 20px;
+}
+
+.movieListConteiner {
+  flex: 1;
+}
+
+.movieListDesc {
+  margin-bottom: 10px;
+}
