@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import css from './MovieDetalilsList.module.css';
 
-export const FilmsList = ({ detaliesSearch }) => {
+export const MovieDetalilsList = ({ detaliesSearch }) => {
   const location = useLocation();
 
   return (
