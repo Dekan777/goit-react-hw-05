@@ -12,7 +12,6 @@ export const MovieDetailsPage = () => {
   const [detalies, setDetalies] = useState({});
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
-  console.log('1', detalies);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
