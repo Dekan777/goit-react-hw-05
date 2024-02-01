@@ -29,13 +29,7 @@ export const HomePage = () => {
 
   return (
     <main className={css.maine}>
-      {/* <h1>Trending today</h1> */}
-      {/* <BackLink value={productName} /> */}
       <FilmsList filmSearch={films} />
     </main>
   );
 };
-
-{
-  /* <SearchBox value={productName} onChange={updateQueryString} /> */
-}

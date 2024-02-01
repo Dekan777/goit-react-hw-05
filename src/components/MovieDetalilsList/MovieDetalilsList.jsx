@@ -14,7 +14,6 @@ export const MovieDetalilsList = ({ detailsSearch }) => {
     overview,
     release_date,
     genres,
-    homepage,
     vote_average,
     vote_count,
   } = detailsSearch;
@@ -39,22 +38,14 @@ export const MovieDetalilsList = ({ detailsSearch }) => {
           ))}
         </p>
         <p>
-          <strong>Homepage:</strong>{' '}
-          <a href={homepage} target="_blank" rel="noopener noreferrer">
-            {homepage}
-          </a>
-        </p>
-        <p>
           <strong>Vote Average:</strong> {vote_average} ({vote_count} votes)
         </p>
         <NavLink
           to={{
-            pathname: `/custom-path/${detailsSearch.id}`, // Replace with your desired path
+            pathname: `/custom-path/${detailsSearch.id}`,
             state: { from: location.pathname },
           }}
-        >
-          View Details
-        </NavLink>
+        ></NavLink>
       </div>
     </div>
   );
