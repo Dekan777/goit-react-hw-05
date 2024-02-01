@@ -3,7 +3,8 @@ import axios from 'axios';
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = 'a85af220d32fb519177ae1885af75e44';
-const TREND_TREND = 'trending/movie/day';
+const TREND = 'trending/movie/day';
+const DETAILS = 'movie/';
 
 export const fetchTrend = async () => {
     const params = new URLSearchParams({
@@ -13,7 +14,7 @@ export const fetchTrend = async () => {
     });
 
     try {
-        const response = await axios.get(`${BASE_URL}${TREND_TREND}?${params}`);
+        const response = await axios.get(`${BASE_URL}${TREND}?${params}`);
         return response.data;
     } catch (error) {
         console.error('Error fetching trend:', error);
@@ -21,10 +22,23 @@ export const fetchTrend = async () => {
     }
 };
 
-// fetchTrend()
-//     .then(result => {
-//         console.log(result);
-//     })
-//     .catch(error => {
-//         console.error('Error:', error);
-//     });
+
+
+export const fetchDetails = async (id) => {
+    const params = new URLSearchParams({
+        api_key: API_KEY,
+
+    });
+
+    try {
+        const response = await axios.get(`${BASE_URL}${DETAILS}${id}?${params}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching details:', error);
+        throw error;
+    }
+};
+
+
+
+
