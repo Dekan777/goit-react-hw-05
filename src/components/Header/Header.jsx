@@ -7,12 +7,12 @@ export const Header = () => {
       <ul className={css.header}>
         <li className={css.headerLinkItem}>
           <NavLink to="/" className={css.headerLink}>
-            <h1>Home</h1>
+            <p className={css.homeCont}>Home</p>
           </NavLink>
         </li>
         <li className={css.headerLinkItem}>
           <NavLink to="/movies" className={css.headerLink}>
-            Search Movies
+            <p className={css.searchCont}>Search Movies</p>
           </NavLink>
         </li>
       </ul>
