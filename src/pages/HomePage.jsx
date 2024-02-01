@@ -1,6 +1,7 @@
 import { fetchTrend } from '../components/Api/Api';
 import { FilmsList } from '../components/FilmsList/FilmsList';
 import { useEffect, useState } from 'react';
+import css from './HomePage.module.css';
 
 export const HomePage = () => {
   const [films, setFilms] = useState([]);
@@ -17,7 +18,7 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <main>
+    <main className={css.maine}>
       <h1>Trending today</h1>
       <FilmsList filmSearch={films} />
     </main>
