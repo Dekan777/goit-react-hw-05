@@ -5,6 +5,7 @@ import { MovieDetalilsList } from '../../components/MovieDetalilsList/MovieDetal
 import { BackLink } from '../../components/BackLink/BackLink';
 import { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 export const MovieDetailsPage = () => {
   const { id } = useParams();
@@ -36,6 +37,13 @@ export const MovieDetailsPage = () => {
       ) : (
         <p>Loading...</p>
       )}
+      <li>
+        <Link to="moviecast">Cast</Link>
+      </li>
+      <li>
+        <Link to="moviereviews">Reviews</Link>
+      </li>
+      <Outlet />
     </main>
   );
 };
