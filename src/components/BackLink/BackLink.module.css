@@ -11,6 +11,6 @@
 }
 
 .link:hover {
-  color: rgb(255, 165, 0);
+  color: orangered;
   font-weight: bold;
 }

@@ -22,8 +22,6 @@ export const fetchTrend = async () => {
     }
 };
 
-
-
 export const fetchDetails = async (id) => {
     const params = new URLSearchParams({
         api_key: API_KEY,
@@ -39,16 +37,6 @@ export const fetchDetails = async (id) => {
         throw error;
     }
 };
-
-// export const fetchDetails = async (id) => {
-//     const params = new URLSearchParams({
-//         api_key: API_KEY,
-//     });
-
-//     return axios
-//         .get(`${BASE_URL}${DETAILS}/${id}?${params}`)
-//         .then(({ data }) => data);
-// }
 
 
 

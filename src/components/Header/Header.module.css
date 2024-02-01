@@ -1,18 +1,29 @@
-.header {
+/* .header {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: baseline;
-  gap: 20px;
-  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid black;
+} */
+
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
+  padding: 10px;
 }
 
-.homeCont,
-.searchCont {
-  color: #333;
+.link {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
 
-  font-size: 18px;
-  border-radius: 8px;
+.active {
+  color: white;
+  background-color: orangered;
 }
