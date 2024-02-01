@@ -27,11 +27,12 @@ export const fetchTrend = async () => {
 export const fetchDetails = async (id) => {
     const params = new URLSearchParams({
         api_key: API_KEY,
+        language: 'en-US',
 
     });
 
     try {
-        const response = await axios.get(`${BASE_URL}${DETAILS}${id}?${params}`);
+        const response = await axios.get(`${BASE_URL}${DETAILS}/${id}?${params}`);
         return response.data;
     } catch (error) {
         console.error('Error fetching details:', error);

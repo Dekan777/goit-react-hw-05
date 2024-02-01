@@ -8,26 +8,30 @@ import { useParams, useLocation } from 'react-router-dom';
 
 export const MovieDetailsPage = () => {
   const { id } = useParams();
-
+  console.log('IIIIDDDDDD', id);
   const [detalies, setDetalies] = useState([]);
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
   console.log(detalies);
 
   useEffect(() => {
-    const trendFilms = async () => {
+    const fetchMovieDetails = async () => {
       try {
-        const trend = await fetchDetails();
-        setDetalies(trend.results);
+        if (id) {
+          const trend = await fetchDetails(id);
+          console.log('trend', trend);
+          setDetalies(trend);
+        }
       } catch (error) {
         console.log(error);
       }
     };
-    trendFilms();
-  }, []);
+    fetchMovieDetails();
+  }, [id]);
+
   return (
     <main>
-      <BackLink to={backLinkHref}>Back to products</BackLink>
+      <BackLink to={backLinkHref}>Back to Home</BackLink>
       <MovieDetalilsList detaliesSearch={detalies} />
     </main>
   );
