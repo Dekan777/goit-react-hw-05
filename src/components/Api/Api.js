@@ -40,6 +40,16 @@ export const fetchDetails = async (id) => {
     }
 };
 
+// export const fetchDetails = async (id) => {
+//     const params = new URLSearchParams({
+//         api_key: API_KEY,
+//     });
+
+//     return axios
+//         .get(`${BASE_URL}${DETAILS}/${id}?${params}`)
+//         .then(({ data }) => data);
+// }
+
 
 
 

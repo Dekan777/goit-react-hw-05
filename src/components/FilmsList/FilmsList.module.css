@@ -1,37 +1,24 @@
-.movieListItem {
-  list-style: none;
-  margin-bottom: 20px;
-  width: 600px;
-  list-style: none;
-  margin-bottom: 20px;
-  width: 600px;
-  border: 2px solid #ddd; /* Border color */
-  border-radius: 8px; /* Border radius for rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
-}
-
-.movieConteiner {
+.container {
   display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.movieListLink {
-  text-decoration: none;
-}
-
-.movieListImg {
-  margin-right: 20px;
-  list-style: none;
-
-  border-radius: 8px 0 0 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.movieListConteiner {
-  flex: 1;
-  padding-right: 15px;
-  padding-top: 10px;
+.movieListImg:hover,
+.movieListImg:focus {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1);
 }
 
 .movieListDesc {
-  margin-bottom: 10px;
+  padding-top: 5px;
+}
+
+.spanConteiner {
+  font-weight: bold; /* Сделать текст жирным */
+  color: rgb(
+    39,
+    39,
+    40
+  ); /* Серый цвет текста, замените #888 на нужный вам серый цвет */
 }
