@@ -75,7 +75,7 @@ export const fetchReviews = async (id) => {
     }
 };
 
-// https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1
+// https://api.themoviedb.org/3/search/movie?query=termi&include_adult=false&language=en-US&page=1
 export const fetchMuvies = async (query) => {
     const params = new URLSearchParams({
         api_key: API_KEY,

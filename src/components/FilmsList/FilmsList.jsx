@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import css from './FilmsList.module.css';
-
+const defaultImg = '/src/img/avatar-1577909_640.jpg';
 export const FilmsList = ({ filmSearch }) => {
   const location = useLocation();
 
@@ -16,11 +16,15 @@ export const FilmsList = ({ filmSearch }) => {
             >
               <div className={css.imgConteiner}>
                 <img
-                  src={`https://image.tmdb.org/t/p/original${poster_path}`}
                   alt={original_title}
                   className={css.movieListImg}
                   width="150"
                   height="290"
+                  src={
+                    poster_path
+                      ? `https://image.tmdb.org/t/p/original${poster_path}`
+                      : defaultImg
+                  }
                 />
               </div>
             </NavLink>

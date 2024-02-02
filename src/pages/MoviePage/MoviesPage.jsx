@@ -3,6 +3,7 @@ import { SearchBox } from '../../components/SearchBox/SearchBox';
 import { fetchMuvies } from '../../components/Api/Api';
 import { useEffect, useState } from 'react';
 import { SearchForm } from '../../components/SearchForm/SearchForm';
+import css from './MoviesPage.module.css';
 
 export const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -10,8 +11,7 @@ export const MoviesPage = () => {
   const [productName, setProductName] = useState(
     searchParams.get('name') ?? ''
   );
-  console.log('searchParams', searchParams);
-  console.log('productName', productName);
+
   const handleSearch = name => {
     const nextParams = name !== '' ? { name } : {};
     setSearchParams(nextParams);
@@ -29,9 +29,9 @@ export const MoviesPage = () => {
     };
     muviePages();
   }, [searchParams]);
-  console.log(muvies);
+
   return (
-    <main>
+    <main className={css.container}>
       <SearchBox onSearch={handleSearch} />
       <SearchForm value={muvies} />
     </main>
