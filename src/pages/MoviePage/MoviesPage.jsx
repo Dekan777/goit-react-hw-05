@@ -8,8 +8,7 @@ import css from './MoviesPage.module.css';
 export const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [muvies, setMuvies] = useState([]);
-  console.log(muvies);
-  console.log(searchParams);
+
   const handleSearch = query => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
