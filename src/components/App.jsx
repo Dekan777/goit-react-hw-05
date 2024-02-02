@@ -7,7 +7,7 @@ import { Header } from './Header/Header';
 // import { Reviews } from './Reviews/Reviews';
 // import { MoviesPage } from '../pages/MoviePage/MoviesPage';
 import css from './App.module.css';
-import { ThreeDots } from 'react-loader-spinner';
+import { Audio } from 'react-loader-spinner';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const MovieDetailsPage = lazy(() =>
@@ -24,16 +24,17 @@ export const App = () => {
 
       <Suspense
         fallback={
-          <ThreeDots
-            visible={true}
-            height="80"
-            width="80"
-            color="#4fa94d"
-            radius="9"
-            ariaLabel="three-dots-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-          />
+          <div className={css.dots}>
+            <Audio
+              height="80"
+              width="80"
+              color="#008B8B"
+              ariaLabel="audio-loading"
+              wrapperStyle={{}}
+              wrapperClass="wrapper-class"
+              visible={true}
+            />
+          </div>
         }
       >
         <Routes>
