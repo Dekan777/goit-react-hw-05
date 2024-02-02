@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 export const Reviews = () => {
   const { id } = useParams();
   const [reviews, setReviews] = useState([]);
-  console.log(reviews);
+
   useEffect(() => {
     const fetchMovieReviews = async () => {
       try {
