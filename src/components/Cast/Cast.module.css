@@ -14,5 +14,6 @@
   .container {
     width: 330px;
     justify-content: center;
+    /* justify-content: center; */
   }
 }
