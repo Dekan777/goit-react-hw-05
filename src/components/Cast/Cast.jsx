@@ -3,7 +3,7 @@ import css from './Cast.module.css';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-const defaultImg = './avatar-1577909_640.jpg';
+const defaultImg = 'https://via.placeholder.com/960x1440/';
 // import { defaultImg } from '/src/img/avatar-1577909_640.jpg';
 export const Cast = () => {
   const { id } = useParams();
@@ -35,15 +35,11 @@ export const Cast = () => {
                 className={css.movieListImg}
                 width="80"
                 height="180"
-                src={
-                  profile_path
-                    ? `https://image.tmdb.org/t/p/original${profile_path}`
-                    : defaultImg
-                }
+                src={`https://image.tmdb.org/t/p/original${profile_path}`}
               />
             ) : (
               <img
-                src="/src/img/avatar-1577909_640.jpg"
+                src="https://via.placeholder.com/960x1440/6%D1%817%D1%8181&text=image%20not%20found"
                 alt={name}
                 className={css.movieListImg}
                 width="80"

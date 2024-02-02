@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import css from './FilmsList.module.css';
-const defaultImg = '/src/img/avatar-1577909_640.jpg';
+const defaultImg = 'https://via.placeholder.com/960x1440/';
 export const FilmsList = ({ filmSearch }) => {
   const location = useLocation();
 
