@@ -3,7 +3,7 @@ import css from './Cast.module.css';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+const defaultImg = '/src/img/avatar-1577909_640.jpg';
 export const Cast = () => {
   const { id } = useParams();
   const [cast, setCast] = useState([]);
@@ -30,11 +30,15 @@ export const Cast = () => {
           <li key={`${index}`} className={css.castListItem}>
             {profile_path ? (
               <img
-                src={`https://image.tmdb.org/t/p/original${profile_path}`}
                 alt={name}
                 className={css.movieListImg}
                 width="80"
                 height="180"
+                src={
+                  profile_path
+                    ? `https://image.tmdb.org/t/p/original${profile_path}`
+                    : defaultImg
+                }
               />
             ) : (
               <img
