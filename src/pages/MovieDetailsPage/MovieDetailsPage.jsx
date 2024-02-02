@@ -6,6 +6,7 @@ import { BackLink } from '../../components/BackLink/BackLink';
 import { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { Link, Outlet } from 'react-router-dom';
+import css from './MovieDetailsPage.module.css';
 
 export const MovieDetailsPage = () => {
   const { id } = useParams();
@@ -36,10 +37,10 @@ export const MovieDetailsPage = () => {
       ) : (
         <p>Loading...</p>
       )}
-      <li>
+      <li className={css.cast}>
         <Link to="cast">Cast</Link>
       </li>
-      <li>
+      <li className={css.rev}>
         <Link to="reviews">Reviews</Link>
       </li>
       <Outlet />

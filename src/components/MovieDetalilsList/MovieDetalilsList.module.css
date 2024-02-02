@@ -61,6 +61,9 @@
 .NavLink:hover {
   background-color: #27ae60; /* Цвет фона при наведении на ссылку */
 }
+.overview {
+  text-align: justify;
+}
 
 @media only screen and (max-width: 720px) {
   .movieDetailsContainer {

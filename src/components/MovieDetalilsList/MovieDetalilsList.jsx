@@ -27,7 +27,7 @@ export const MovieDetalilsList = ({ detailsSearch }) => {
       />
       <div className={css.details}>
         <h2>{title}</h2>
-        <p>{overview}</p>
+        <p className={css.overview}>{overview}</p>
         <p>
           <strong>Release Date:</strong> {release_date}
         </p>

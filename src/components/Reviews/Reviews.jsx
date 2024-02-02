@@ -24,7 +24,7 @@ export const Reviews = () => {
   }, [id]);
 
   return (
-    <section>
+    <section className={css.sectiona}>
       {reviews.length > 0 ? (
         <ul className={css.container}>
           {reviews.map(({ id, author, author_details, content }) => (

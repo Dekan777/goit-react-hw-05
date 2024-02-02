@@ -24,7 +24,7 @@ export const Cast = () => {
   }, [id]);
 
   return (
-    <section>
+    <section className={css.section}>
       <ul className={css.container}>
         {cast.map(({ name, profile_path, character }, index) => (
           <li key={`${index}`} className={css.castListItem}>
