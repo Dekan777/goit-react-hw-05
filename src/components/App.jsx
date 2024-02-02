@@ -4,7 +4,7 @@ import { Header } from './Header/Header';
 import { MovieDetailsPage } from '../pages/MovieDetailsPage/MovieDetailsPage';
 import { Cast } from './Cast/Cast';
 import { Reviews } from './Reviews/Reviews';
-// import { MoviePage } from '../pages/MoviePage';
+import { MoviesPage } from '../pages/MoviePage/MoviesPage';
 import css from './App.module.css';
 
 // import axios from 'axios';
@@ -19,7 +19,7 @@ export const App = () => {
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
-        {/* <Route path="/movies" element={<MoviePage />} /> */}
+        <Route path="/movies" element={<MoviesPage />} />
       </Routes>
     </div>
   );
