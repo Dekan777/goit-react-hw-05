@@ -3,7 +3,8 @@ import css from './Cast.module.css';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-const defaultImg = '/src/img/avatar-1577909_640.jpg';
+const defaultImg = './avatar-1577909_640.jpg';
+// import { defaultImg } from '/src/img/avatar-1577909_640.jpg';
 export const Cast = () => {
   const { id } = useParams();
   const [cast, setCast] = useState([]);
