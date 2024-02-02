@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import css from './SearchForm.module.css';
-const defaultImg = '/src/img/avatar-1577909_640.jpg';
+// const defaultImg = '/src/img/avatar-1577909_640.jpg';
 
 export const SearchForm = ({ value }) => {
   const location = useLocation();
@@ -24,7 +24,7 @@ export const SearchForm = ({ value }) => {
                     src={
                       poster_path
                         ? `https://image.tmdb.org/t/p/original${poster_path}`
-                        : defaultImg
+                        : `https://via.placeholder.com/960x1440/6%D1%817%D1%8181&text=image%20not%20found`
                     }
                   />
                 </div>
