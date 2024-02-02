@@ -2,7 +2,7 @@ import css from './SearchBox.module.css';
 import { useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
-export const SearchBox = ({ initialValue, onSearch }) => {
+export const SearchBox = ({ onSearch }) => {
   const inputRef = useRef();
 
   const handleSubmit = evt => {
@@ -15,7 +15,7 @@ export const SearchBox = ({ initialValue, onSearch }) => {
     }
 
     onSearch(inputValue);
-    evt.target.reset(); // Reset the form directly
+    evt.target.reset();
   };
   return (
     <div className={css.container}>
@@ -28,7 +28,7 @@ export const SearchBox = ({ initialValue, onSearch }) => {
             autoFocus={true}
             placeholder=""
             className={css.inputField}
-            defaultValue={initialValue} // Use defaultValue instead of value
+            defaultValue={''}
           />
           <button type="submit" className={css.submitButton}>
             Search
