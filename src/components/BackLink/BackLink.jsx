@@ -5,7 +5,7 @@ import css from './BackLink.module.css';
 export const BackLink = ({ to, children }) => {
   return (
     <Link to={to} className={css.link}>
-      <FaAngleDoubleLeft size="24" />
+      <FaAngleDoubleLeft size="18" />
       {children}
     </Link>
   );

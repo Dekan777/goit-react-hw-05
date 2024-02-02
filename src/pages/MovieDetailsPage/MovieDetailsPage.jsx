@@ -9,7 +9,6 @@ import { Link, Outlet } from 'react-router-dom';
 
 export const MovieDetailsPage = () => {
   const { id } = useParams();
-  //   console.log('IIIIDDDDDD', id);
   const [detalies, setDetalies] = useState({});
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
@@ -38,10 +37,10 @@ export const MovieDetailsPage = () => {
         <p>Loading...</p>
       )}
       <li>
-        <Link to="moviecast">Cast</Link>
+        <Link to="cast">Cast</Link>
       </li>
       <li>
-        <Link to="moviereviews">Reviews</Link>
+        <Link to="reviews">Reviews</Link>
       </li>
       <Outlet />
     </main>

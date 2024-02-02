@@ -38,6 +38,23 @@ export const fetchDetails = async (id) => {
     }
 };
 
+// https://api.themoviedb.org/3/movie/movie_id/credits?language=en-US
+export const fetchCast = async (id) => {
+    const params = new URLSearchParams({
+        api_key: API_KEY,
+        language: 'en-US',
+
+
+    });
+
+    try {
+        const response = await axios.get(`${BASE_URL}${DETAILS}/${id}/credits?${params}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching details:', error);
+        throw error;
+    }
+};
 
 
 
