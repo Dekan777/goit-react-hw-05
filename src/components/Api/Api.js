@@ -57,4 +57,20 @@ export const fetchCast = async (id) => {
 };
 
 
+// https://api.themoviedb.org/3/movie/movie_id/reviews?language=en-US&page=1
+export const fetchReviews = async (id) => {
+    const params = new URLSearchParams({
+        api_key: API_KEY,
+
+
+    });
+
+    try {
+        const response = await axios.get(`${BASE_URL}${DETAILS}/${id}/reviews?${params}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching details:', error);
+        throw error;
+    }
+};
 
