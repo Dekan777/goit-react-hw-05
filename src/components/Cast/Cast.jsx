@@ -13,7 +13,7 @@ export const Cast = () => {
       try {
         if (id) {
           const castData = await fetchCast(id);
-          console.log(castData.cast);
+
           setCast(castData.cast);
         }
       } catch (error) {
@@ -28,15 +28,25 @@ export const Cast = () => {
       <ul className={css.container}>
         {cast.map(({ name, profile_path, character }, index) => (
           <li key={`${index}`} className={css.castListItem}>
-            <img
-              src={`https://image.tmdb.org/t/p/original${profile_path}`}
-              alt={name}
-              className={css.movieListImg}
-              width="80"
-              height="180"
-            />
-            <p className={css.castP}>Name: {name}</p>
-            <p className={css.castP}>Character: {character}</p>
+            {profile_path ? (
+              <img
+                src={`https://image.tmdb.org/t/p/original${profile_path}`}
+                alt={name}
+                className={css.movieListImg}
+                width="80"
+                height="180"
+              />
+            ) : (
+              <img
+                src="/src/img/avatar-1577909_640.png"
+                alt={name}
+                className={css.movieListImg}
+                width="80"
+                height="180"
+              />
+            )}
+            {/* <p className={css.castP}>Name: {name}</p>
+            <p className={css.castP}>Character: {character}</p> */}
           </li>
         ))}
       </ul>
