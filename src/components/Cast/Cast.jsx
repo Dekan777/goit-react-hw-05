@@ -38,7 +38,7 @@ export const Cast = () => {
               />
             ) : (
               <img
-                src="/src/img/avatar-1577909_640.png"
+                src="/src/img/avatar-1577909_640.jpg"
                 alt={name}
                 className={css.movieListImg}
                 width="80"
