@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 // import { useSearchParams } from 'react-router-dom';
 import css from './HomePage.module.css';
 
-export const HomePage = () => {
+export default function HomePage() {
   const [films, setFilms] = useState([]);
   // const [searchParams, setSearchParams] = useSearchParams();
   // const productName = searchParams.get('name') ?? '';
@@ -32,4 +32,4 @@ export const HomePage = () => {
       <FilmsList filmSearch={films} />
     </main>
   );
-};
+}

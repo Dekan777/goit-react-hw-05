@@ -3,9 +3,9 @@ import css from './Cast.module.css';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-const defaultImg = 'https://via.placeholder.com/960x1440/';
+
 // import { defaultImg } from '/src/img/avatar-1577909_640.jpg';
-export const Cast = () => {
+export default function Cast() {
   const { id } = useParams();
   const [cast, setCast] = useState([]);
 
@@ -53,4 +53,4 @@ export const Cast = () => {
       </ul>
     </section>
   );
-};
+}

@@ -4,7 +4,7 @@ import css from './Reviews.module.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-export const Reviews = () => {
+export default function Reviews() {
   const { id } = useParams();
   const [reviews, setReviews] = useState([]);
 
@@ -40,4 +40,4 @@ export const Reviews = () => {
       )}
     </section>
   );
-};
+}

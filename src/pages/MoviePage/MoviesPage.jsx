@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { SearchForm } from '../../components/SearchForm/SearchForm';
 import css from './MoviesPage.module.css';
 
-export const MoviesPage = () => {
+export default function MoviesPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [muvies, setMuvies] = useState([]);
 
@@ -32,4 +32,4 @@ export const MoviesPage = () => {
       <SearchForm value={muvies} />
     </main>
   );
-};
+}

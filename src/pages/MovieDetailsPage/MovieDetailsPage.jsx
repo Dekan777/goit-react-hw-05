@@ -8,7 +8,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import { Link, Outlet } from 'react-router-dom';
 import css from './MovieDetailsPage.module.css';
 
-export const MovieDetailsPage = () => {
+export default function MovieDetailsPage() {
   const { id } = useParams();
   const [detalies, setDetalies] = useState({});
   const location = useLocation();
@@ -46,4 +46,4 @@ export const MovieDetailsPage = () => {
       <Outlet />
     </main>
   );
-};
+}
