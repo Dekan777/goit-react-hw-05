@@ -81,13 +81,13 @@ export const fetchMuvies = async (query) => {
         api_key: API_KEY,
         language: 'en-US',
         include_adult: false,
-        query: query,
+
         page: '1',
 
     });
 
     try {
-        const response = await axios.get(`${BASE_URL}${SEARCH}?${params}`);
+        const response = await axios.get(`${BASE_URL}${SEARCH}?${params}&${query}`);
         return response.data;
     } catch (error) {
         console.error('Error fetching details:', error);

@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { lazy } from 'react';
+// import { lazy } from 'react';
 import { HomePage } from '../pages/HomePage/HomePage';
 import { Header } from './Header/Header';
 import { MovieDetailsPage } from '../pages/MovieDetailsPage/MovieDetailsPage';

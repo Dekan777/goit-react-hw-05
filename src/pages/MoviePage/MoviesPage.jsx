@@ -8,14 +8,11 @@ import css from './MoviesPage.module.css';
 export const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [muvies, setMuvies] = useState([]);
-  const [productName, setProductName] = useState(
-    searchParams.get('name') ?? ''
-  );
-
-  const handleSearch = name => {
-    const nextParams = name !== '' ? { name } : {};
+  console.log(muvies);
+  console.log(searchParams);
+  const handleSearch = query => {
+    const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
-    setProductName('');
   };
 
   useEffect(() => {
