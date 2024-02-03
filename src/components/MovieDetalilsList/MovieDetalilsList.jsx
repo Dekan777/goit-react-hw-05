@@ -22,9 +22,21 @@ export const MovieDetalilsList = ({ detailsSearch }) => {
     <div className={css.movieDetailsContainer}>
       <img
         className={css.poster}
+        alt={`${title} Poster`}
+        src={
+          poster_path
+            ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+            : `https://via.placeholder.com/960x1440/6%D1%817%D1%8181&text=image%20not%20found`
+        }
+      />
+
+      {/* 
+      <img
+        className={css.poster}
         src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
         alt={`${title} Poster`}
-      />
+      /> */}
+
       <div className={css.details}>
         <h2>{title}</h2>
         <p className={css.overview}>{overview}</p>
