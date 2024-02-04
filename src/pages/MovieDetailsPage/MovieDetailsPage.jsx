@@ -31,7 +31,7 @@ export default function MovieDetailsPage() {
 
   return (
     <main>
-      <BackLink to={backLinkHref}>Back to Home</BackLink>
+      <BackLink to={backLinkHref}>Back</BackLink>
       {Object.keys(detalies).length > 0 ? (
         <MovieDetalilsList detailsSearch={detalies} />
       ) : (

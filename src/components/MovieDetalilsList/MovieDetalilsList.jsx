@@ -30,13 +30,6 @@ export const MovieDetalilsList = ({ detailsSearch }) => {
         }
       />
 
-      {/* 
-      <img
-        className={css.poster}
-        src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-        alt={`${title} Poster`}
-      /> */}
-
       <div className={css.details}>
         <h2>{title}</h2>
         <p className={css.overview}>{overview}</p>
